@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Lender - AI Loan Eligibility Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/input.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header style="margin-bottom: 2rem;">
+      <h1>Smart Lender</h1>
+      <p class="subtitle">AI-Powered Loan Eligibility Prediction System</p>
+    </header>
+
+    <div class="card">
+      <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">Transforming Loan Decisions with Machine Learning</h2>
+      
+      <p style="color: var(--text-secondary); text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.05rem; line-height: 1.7;">
+        Smart Lender is a production-grade predictive system that leverages historical application records, customer financial criteria, and advanced machine learning models to assess loan eligibility instantly and accurately.
+      </p>
+
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <!-- SVG Chart Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <div class="feature-title">Random Forest Classifier</div>
+          <div class="feature-desc">Trained on historical data using an ensemble estimator to achieve high generalizability and predictive accuracy.</div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <!-- SVG Security Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div class="feature-title">SMOTE Balanced Target</div>
+          <div class="feature-desc">Balanced via Synthetic Minority Over-sampling to prevent bias and ensure high accuracy for both approval and rejection outcomes.</div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <!-- SVG Clock Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="feature-title">Instant AI Verification</div>
+          <div class="feature-desc">Analyzes applicant profiles and credit history within milliseconds to output the prediction instantly.</div>
+        </div>
+      </div>
+
+      <div class="btn-actions">
+        <a href="/predict" class="btn btn-primary" style="max-width: 320px;">
+          Check Loan Eligibility
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      Smart Lender Loan Prediction System &copy; 2026. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

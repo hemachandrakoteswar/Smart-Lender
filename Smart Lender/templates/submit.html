@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Results - Smart Lender</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/input.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header style="margin-bottom: 2rem;">
+      <h1>Application Result</h1>
+      <p class="subtitle">AI Eligibility Prediction Outcome</p>
+    </header>
+
+    <div class="card">
+      <div class="result-container">
+        {% if result == "Loan will be Approved" %}
+          <div class="result-badge success">
+            <!-- SVG Checkmark -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="result-text success">Approved</div>
+          <div class="result-desc">
+            Congratulations! Based on the submitted financial information, the applicant is eligible for loan approval under the predictive model's criteria.
+          </div>
+        {% else %}
+          <div class="result-badge error">
+            <!-- SVG Cross -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </div>
+          <div class="result-text error">Rejected</div>
+          <div class="result-desc">
+            Unfortunately, based on the submitted financial information, the applicant does not meet the necessary eligibility criteria for loan approval at this time.
+          </div>
+        {% endif %}
+
+        <div class="btn-actions" style="width: 100%; max-width: 400px;">
+          <a href="/predict" class="btn btn-secondary">Predict Another</a>
+          <a href="/" class="btn btn-primary">Home</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Smart Lender Loan Prediction System &copy; 2026. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
